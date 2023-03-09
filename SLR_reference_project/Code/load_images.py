@@ -14,10 +14,12 @@ def pickle_images_labels():
 		print(image)
 		label = image[image.find(os.sep)+1: image.rfind(os.sep)]
 		img = cv2.imread(image, 0)
-		images_labels.append((np.array(img, dtype=np.uint8), int(label)))
+		if not img is None:
+			images_labels.append((np.array(img, dtype=np.uint8), int(label)))
 	return images_labels
 
 images_labels = pickle_images_labels()
+print(images_labels)
 images_labels = shuffle(shuffle(shuffle(shuffle(images_labels))))
 images, labels = zip(*images_labels)
 print("Length of images_labels", len(images_labels))

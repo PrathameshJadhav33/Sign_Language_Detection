@@ -2,6 +2,7 @@ import numpy as np
 import pickle
 import cv2, os
 from glob import glob
+import tensorflow as tf
 from keras import optimizers
 from keras.models import Sequential
 from keras.layers import Dense
@@ -12,12 +13,13 @@ from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras.callbacks import ModelCheckpoint
 from keras import backend as K
-K.set_image_dim_ordering('tf')
+#K.set_image_dim_ordering('tf')
+K.image_data_format()
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 def get_image_size():
-	img = cv2.imread('gestures/1/100.jpg', 0)
+	img = cv2.imread('gestures/1/1.jpg', 0)
 	return img.shape
 
 def get_num_of_classes():
@@ -38,10 +40,10 @@ def cnn_model():
 	model.add(Dense(128, activation='relu'))
 	model.add(Dropout(0.2))
 	model.add(Dense(num_of_classes, activation='softmax'))
-	sgd = optimizers.SGD(lr=1e-2)
+	sgd = optimizers.SGD(lr=1e-5)
 	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 	filepath="cnn_model_keras2.h5"
-	checkpoint1 = ModelCheckpoint(filepath, monitor='val_acc', verbose=1, save_best_only=True, mode='max')
+	checkpoint1 = ModelCheckpoint(filepath, monitor='val_accuracy', verbose=1, save_best_only=True, mode='max')
 	callbacks_list = [checkpoint1]
 	#from keras.utils import plot_model
 	#plot_model(model, to_file='model.png', show_shapes=True)
@@ -63,11 +65,16 @@ def train():
 	train_labels = np_utils.to_categorical(train_labels)
 	val_labels = np_utils.to_categorical(val_labels)
 
+	#train_labels = np.asarray(train_labels).astype('int32').reshape((-1, 1))
+	#val_labels = np.asarray(val_labels).astype('int32').reshape((-1, 1))
+
+	#train_labels = tf.one_hot(train_labels, get_num_of_classes());
+	#val_labels = tf.one_hot(val_labels, get_num_of_classes())
 	print(val_labels.shape)
 
 	model, callbacks_list = cnn_model()
 	model.summary()
-	model.fit(train_images, train_labels, validation_data=(val_images, val_labels), epochs=15, batch_size=500, callbacks=callbacks_list)
+	model.fit(train_images, train_labels, validation_data=(val_images, val_labels), epochs=40, batch_size=500, callbacks=callbacks_list)
 	scores = model.evaluate(val_images, val_labels, verbose=0)
 	print("CNN Error: %.2f%%" % (100-scores[1]*100))
 	#model.save('cnn_model_keras2.h5')

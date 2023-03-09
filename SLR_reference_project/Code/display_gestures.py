@@ -2,13 +2,13 @@ import cv2, os, random
 import numpy as np
 
 def get_image_size():
-	img = cv2.imread('gestures/0/100.jpg', 0)
+	img = cv2.imread('gestures/1/1.jpg', 0)
 	return img.shape
 
 gestures = os.listdir('gestures/')
 gestures.sort(key = int)
-begin_index = 0
-end_index = 5
+begin_index = 1
+end_index = 2
 image_x, image_y = get_image_size()
 
 if len(gestures)%5 != 0:

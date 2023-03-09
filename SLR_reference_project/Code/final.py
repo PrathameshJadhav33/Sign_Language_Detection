@@ -1,7 +1,7 @@
 import cv2, pickle
 import numpy as np
 import tensorflow as tf
-from cnn_tf import cnn_model_fn
+#from cnn_tf import cnn_model_fn
 import os
 import sqlite3, pyttsx3
 from keras.models import load_model
@@ -18,7 +18,7 @@ def get_hand_hist():
 	return hist
 
 def get_image_size():
-	img = cv2.imread('gestures/0/100.jpg', 0)
+	img = cv2.imread('gestures/1/100.jpg', 0)
 	return img.shape
 
 image_x, image_y = get_image_size()
@@ -318,5 +318,5 @@ def recognize():
 		else:
 			break
 
-keras_predict(model, np.zeros((50, 50), dtype = np.uint8))		
+keras_predict(model, np.zeros((50, 50), dtype = np.uint8))
 recognize()

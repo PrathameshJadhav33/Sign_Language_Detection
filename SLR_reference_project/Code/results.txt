@@ -1,0 +1,230 @@
+"F:\Final Year Project\SLR_reference_project\venv\Scripts\python.exe" "F:\Final Year Project\SLR_reference_project\Code\testing.py" 
+(200, 2) (200, 50, 50, 1)
+(2000, 2) (2000, 50, 50, 1)
+1
+
+
+"F:\Final Year Project\SLR_reference_project\venv\Scripts\python.exe" "F:\Final Year Project\SLR_reference_project\Code\testing.py" 
+(400, 1) (400, 50, 50, 1)
+(4000, 1) (4000, 50, 50, 1)
+2
+
+
+"F:\Final Year Project\SLR_reference_project\venv\Scripts\python.exe" "F:\Final Year Project\SLR_reference_project\Code\cnn_model_train.py" 
+(400, 2)
+F:\Final Year Project\SLR_reference_project\venv\lib\site-packages\keras\optimizers\optimizer_v2\gradient_descent.py:114: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 49, 49, 16)        80        
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 25, 25, 16)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 23, 23, 32)        4640      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 8, 8, 32)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 4, 4, 64)          51264     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 1, 1, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 2)                 258       
+                                                                 
+=================================================================
+Total params: 64,562
+Trainable params: 64,562
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/15
+8/8 [==============================] - ETA: 0s - loss: 138847.9844 - accuracy: 0.5073
+Epoch 1: val_accuracy improved from -inf to 0.53250, saving model to cnn_model_keras2.h5
+8/8 [==============================] - 15s 2s/step - loss: 138847.9844 - accuracy: 0.5073 - val_loss: 475979.1250 - val_accuracy: 0.5325
+Epoch 2/15
+8/8 [==============================] - ETA: 0s - loss: 63061.8789 - accuracy: 0.4933
+Epoch 2: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 16s 2s/step - loss: 63061.8789 - accuracy: 0.4933 - val_loss: 0.6923 - val_accuracy: 0.5325
+Epoch 3/15
+8/8 [==============================] - ETA: 0s - loss: 0.6934 - accuracy: 0.4955
+Epoch 3: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 15s 2s/step - loss: 0.6934 - accuracy: 0.4955 - val_loss: 0.6923 - val_accuracy: 0.5325
+Epoch 4/15
+8/8 [==============================] - ETA: 0s - loss: 0.6934 - accuracy: 0.4955
+Epoch 4: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 10s 1s/step - loss: 0.6934 - accuracy: 0.4955 - val_loss: 0.6924 - val_accuracy: 0.5325
+Epoch 5/15
+8/8 [==============================] - ETA: 0s - loss: 0.6934 - accuracy: 0.4955
+Epoch 5: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 15s 2s/step - loss: 0.6934 - accuracy: 0.4955 - val_loss: 0.6924 - val_accuracy: 0.5325
+Epoch 6/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 6: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 16s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6925 - val_accuracy: 0.5325
+Epoch 7/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 7: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 16s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6925 - val_accuracy: 0.5325
+Epoch 8/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 8: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 17s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6925 - val_accuracy: 0.5325
+Epoch 9/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 9: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 16s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6926 - val_accuracy: 0.5325
+Epoch 10/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 10: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 14s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6926 - val_accuracy: 0.5325
+Epoch 11/15
+8/8 [==============================] - ETA: 0s - loss: 0.6933 - accuracy: 0.4955
+Epoch 11: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 15s 2s/step - loss: 0.6933 - accuracy: 0.4955 - val_loss: 0.6927 - val_accuracy: 0.5325
+Epoch 12/15
+8/8 [==============================] - ETA: 0s - loss: 0.6932 - accuracy: 0.4955
+Epoch 12: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 15s 2s/step - loss: 0.6932 - accuracy: 0.4955 - val_loss: 0.6927 - val_accuracy: 0.5325
+Epoch 13/15
+8/8 [==============================] - ETA: 0s - loss: 0.6932 - accuracy: 0.4955
+Epoch 13: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 16s 2s/step - loss: 0.6932 - accuracy: 0.4955 - val_loss: 0.6927 - val_accuracy: 0.5325
+Epoch 14/15
+8/8 [==============================] - ETA: 0s - loss: 0.6932 - accuracy: 0.4955
+Epoch 14: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 15s 2s/step - loss: 0.6932 - accuracy: 0.4955 - val_loss: 0.6928 - val_accuracy: 0.5325
+Epoch 15/15
+8/8 [==============================] - ETA: 0s - loss: 0.6932 - accuracy: 0.4955
+Epoch 15: val_accuracy did not improve from 0.53250
+8/8 [==============================] - 14s 2s/step - loss: 0.6932 - accuracy: 0.4955 - val_loss: 0.6928 - val_accuracy: 0.5325
+CNN Error: 46.75%
+
+
+"F:\Final Year Project\SLR_reference_project\venv\Scripts\python.exe" "F:\Final Year Project\SLR_reference_project\Code\cnn_model_train.py" 
+(600, 3)
+F:\Final Year Project\SLR_reference_project\venv\lib\site-packages\keras\optimizers\optimizer_v2\gradient_descent.py:114: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super().__init__(name, **kwargs)
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 49, 49, 16)        80        
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 25, 25, 16)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 23, 23, 32)        4640      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 8, 8, 32)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 4, 4, 64)          51264     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 1, 1, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 128)               8320      
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 3)                 387       
+                                                                 
+=================================================================
+Total params: 64,691
+Trainable params: 64,691
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/20
+12/12 [==============================] - ETA: 0s - loss: 18.6917 - accuracy: 0.3743
+Epoch 1: val_accuracy improved from -inf to 0.46833, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 22s 2s/step - loss: 18.6917 - accuracy: 0.3743 - val_loss: 5.8702 - val_accuracy: 0.4683
+Epoch 2/20
+12/12 [==============================] - ETA: 0s - loss: 10.2574 - accuracy: 0.3857
+Epoch 2: val_accuracy improved from 0.46833 to 0.52500, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 25s 2s/step - loss: 10.2574 - accuracy: 0.3857 - val_loss: 3.4866 - val_accuracy: 0.5250
+Epoch 3/20
+12/12 [==============================] - ETA: 0s - loss: 8.4183 - accuracy: 0.4115
+Epoch 3: val_accuracy improved from 0.52500 to 0.54667, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 25s 2s/step - loss: 8.4183 - accuracy: 0.4115 - val_loss: 2.8918 - val_accuracy: 0.5467
+Epoch 4/20
+12/12 [==============================] - ETA: 0s - loss: 7.5098 - accuracy: 0.4350
+Epoch 4: val_accuracy improved from 0.54667 to 0.58333, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 23s 2s/step - loss: 7.5098 - accuracy: 0.4350 - val_loss: 2.4157 - val_accuracy: 0.5833
+Epoch 5/20
+12/12 [==============================] - ETA: 0s - loss: 6.7799 - accuracy: 0.4557
+Epoch 5: val_accuracy improved from 0.58333 to 0.62500, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 21s 2s/step - loss: 6.7799 - accuracy: 0.4557 - val_loss: 1.9810 - val_accuracy: 0.6250
+Epoch 6/20
+12/12 [==============================] - ETA: 0s - loss: 6.3704 - accuracy: 0.4722
+Epoch 6: val_accuracy improved from 0.62500 to 0.66333, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 24s 2s/step - loss: 6.3704 - accuracy: 0.4722 - val_loss: 1.7326 - val_accuracy: 0.6633
+Epoch 7/20
+12/12 [==============================] - ETA: 0s - loss: 5.6752 - accuracy: 0.4935
+Epoch 7: val_accuracy improved from 0.66333 to 0.68167, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 30s 2s/step - loss: 5.6752 - accuracy: 0.4935 - val_loss: 1.5261 - val_accuracy: 0.6817
+Epoch 8/20
+12/12 [==============================] - ETA: 0s - loss: 5.1677 - accuracy: 0.5097
+Epoch 8: val_accuracy improved from 0.68167 to 0.71667, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 27s 2s/step - loss: 5.1677 - accuracy: 0.5097 - val_loss: 1.3519 - val_accuracy: 0.7167
+Epoch 9/20
+12/12 [==============================] - ETA: 0s - loss: 4.9545 - accuracy: 0.5280
+Epoch 9: val_accuracy improved from 0.71667 to 0.73500, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 32s 2s/step - loss: 4.9545 - accuracy: 0.5280 - val_loss: 1.2725 - val_accuracy: 0.7350
+Epoch 10/20
+12/12 [==============================] - ETA: 0s - loss: 4.6739 - accuracy: 0.5383
+Epoch 10: val_accuracy improved from 0.73500 to 0.76833, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 31s 3s/step - loss: 4.6739 - accuracy: 0.5383 - val_loss: 1.1752 - val_accuracy: 0.7683
+Epoch 11/20
+12/12 [==============================] - ETA: 0s - loss: 4.4133 - accuracy: 0.5462
+Epoch 11: val_accuracy improved from 0.76833 to 0.78333, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 22s 2s/step - loss: 4.4133 - accuracy: 0.5462 - val_loss: 1.0928 - val_accuracy: 0.7833
+Epoch 12/20
+12/12 [==============================] - ETA: 0s - loss: 4.1202 - accuracy: 0.5595
+Epoch 12: val_accuracy improved from 0.78333 to 0.78667, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 24s 2s/step - loss: 4.1202 - accuracy: 0.5595 - val_loss: 1.0730 - val_accuracy: 0.7867
+Epoch 13/20
+12/12 [==============================] - ETA: 0s - loss: 3.9598 - accuracy: 0.5738
+Epoch 13: val_accuracy improved from 0.78667 to 0.78833, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 29s 3s/step - loss: 3.9598 - accuracy: 0.5738 - val_loss: 1.0326 - val_accuracy: 0.7883
+Epoch 14/20
+12/12 [==============================] - ETA: 0s - loss: 3.7476 - accuracy: 0.5762
+Epoch 14: val_accuracy improved from 0.78833 to 0.79833, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 26s 2s/step - loss: 3.7476 - accuracy: 0.5762 - val_loss: 1.0051 - val_accuracy: 0.7983
+Epoch 15/20
+12/12 [==============================] - ETA: 0s - loss: 3.7410 - accuracy: 0.5852
+Epoch 15: val_accuracy improved from 0.79833 to 0.80500, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 32s 3s/step - loss: 3.7410 - accuracy: 0.5852 - val_loss: 0.9767 - val_accuracy: 0.8050
+Epoch 16/20
+12/12 [==============================] - ETA: 0s - loss: 3.4488 - accuracy: 0.6047
+Epoch 16: val_accuracy improved from 0.80500 to 0.81333, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 30s 3s/step - loss: 3.4488 - accuracy: 0.6047 - val_loss: 0.9559 - val_accuracy: 0.8133
+Epoch 17/20
+12/12 [==============================] - ETA: 0s - loss: 3.3936 - accuracy: 0.6120
+Epoch 17: val_accuracy did not improve from 0.81333
+12/12 [==============================] - 25s 2s/step - loss: 3.3936 - accuracy: 0.6120 - val_loss: 0.9361 - val_accuracy: 0.8117
+Epoch 18/20
+12/12 [==============================] - ETA: 0s - loss: 3.1854 - accuracy: 0.6185
+Epoch 18: val_accuracy improved from 0.81333 to 0.81667, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 23s 2s/step - loss: 3.1854 - accuracy: 0.6185 - val_loss: 0.9259 - val_accuracy: 0.8167
+Epoch 19/20
+12/12 [==============================] - ETA: 0s - loss: 3.1445 - accuracy: 0.6145
+Epoch 19: val_accuracy improved from 0.81667 to 0.82000, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 29s 3s/step - loss: 3.1445 - accuracy: 0.6145 - val_loss: 0.9041 - val_accuracy: 0.8200
+Epoch 20/20
+12/12 [==============================] - ETA: 0s - loss: 3.0201 - accuracy: 0.6293
+Epoch 20: val_accuracy improved from 0.82000 to 0.82333, saving model to cnn_model_keras2.h5
+12/12 [==============================] - 28s 2s/step - loss: 3.0201 - accuracy: 0.6293 - val_loss: 0.9012 - val_accuracy: 0.8233
+CNN Error: 17.67%
+
+Process finished with exit code 0

@@ -64,10 +64,12 @@ def store_images(g_id):
 		thresh = cv2.merge((thresh,thresh,thresh))
 		thresh = cv2.cvtColor(thresh, cv2.COLOR_BGR2GRAY)
 		thresh = thresh[y:y+h, x:x+w]
-		contours = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
-
+		contours = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[0]
+		print(len(contours))
 		if len(contours) > 0:
 			contour = max(contours, key = cv2.contourArea)
+			print("Area:",cv2.contourArea(contour))
+			print("frames:",frames)
 			if cv2.contourArea(contour) > 10000 and frames > 50:
 				x1, y1, w1, h1 = cv2.boundingRect(contour)
 				pic_no += 1
